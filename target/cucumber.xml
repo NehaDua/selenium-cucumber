@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="29" time="3968.276681">
+<testcase classname="Regression test suite for DVS Automation Admin" name="User now enters the valid credentials and clicks on Login button" time="42.031003">
+<system-out><![CDATA[Given Plan Smart Administrative Portal Login Screen.........................passed
+Then Verify url of Plan Smart Administrative Portal Login Screen............passed
+Given "abhishek.bhambri@alight.com" "alight@123" and login button...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User now selects and verify client and project" time="84.448811">
+<system-out><![CDATA[Given User is on selectClient Page..........................................passed
+When Select clientName......................................................passed
+Then Verify select period page..............................................passed
+When Select ProjectName.....................................................passed
+Then verify home stats page selectedClient..................................passed
+Then Get statistics data from home page.....................................passed
+Then Open pdf and close it..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="performing action on subscriber search with different search criteria" time="267.016108">
+<system-out><![CDATA[When click on subscriber Menu...............................................passed
+Then click on standard alt doc list to open pdf.............................passed
+Then enter firstname "first" and retrieve data..............................passed
+Then verify search result of grid...........................................passed
+Then click on partial match.................................................passed
+Then Retrieve data for partial match........................................passed
+Then verify partial match grid result.......................................passed
+Then click on dependent.....................................................passed
+Then retrieve result for dependent exact match..............................passed
+Then verify grid of dependent...............................................passed
+Then click on dependent partial match.......................................passed
+Then retrieve result for dependent partial match............................passed
+Then verify grid............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform addition modification and verifying changelog for dependant and subscriber" time="160.385533">
+<system-out><![CDATA[When click and verify  subscriber menu......................................passed
+Then search subscriber using "10536278".....................................passed
+Then click on retrieve button...............................................passed
+Then verify search results are displayed....................................passed
+Then add new subscriber using "stagging" "test" "chatarpur" "Delhi" "12/3/1991" "78965" "74185" "123748569".passed
+Then add new dependent using "stagging" "test" "12/3/1991" "74185"..........passed
+Then click on save and return to subscriber button..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform action in DataEntry tab" time="78.182393">
+<system-out><![CDATA[Then click and verify  DataEntry tab........................................passed
+Then write typecode "BC" in dependant type code.............................passed
+Then Click on save and continue.............................................passed
+Then insert document........................................................passed
+Then Click on insert documents button.......................................passed
+Then verify the dependant gender and select child first name,child last name,date of birth,father first name,father last name if dependant is male.If female then select child first name, child last name, date of birth, mother first name,mother last name.passed
+Then click on attempt verification..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User Perform action in Audit tab" time="41.050188">
+<system-out><![CDATA[Then click and verify  Audit tab............................................passed
+Then click on the cross icon to remove verification for the dependent.......passed
+Then click on yes from remove verification dialog...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform action in Issues tab" time="22.572037">
+<failure message="org.junit.ComparisonFailure: expected:&lt;test, [stagging]&gt; but was:&lt;test, [QA]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at com.pageObjects.SubscriberPage.verifyIssueCreated(SubscriberPage.java:411)&#13;&#10;&#9;at stepDefinition.Simple.verify_that_issue_is_created(Simple.java:546)&#13;&#10;&#9;at ✽.Then verify that issue is created &quot;QA&quot; &quot;test&quot;(login.feature:79)&#13;&#10;"><![CDATA[Then click and verify Issues tab............................................passed
+Then verify that issue is created "QA" "test"...............................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<test, [stagging]> but was:<test, [QA]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.pageObjects.SubscriberPage.verifyIssueCreated(SubscriberPage.java:411)
+	at stepDefinition.Simple.verify_that_issue_is_created(Simple.java:546)
+	at ✽.Then verify that issue is created "QA" "test"(login.feature:79)
+]]></failure>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User Perform action in Subscriber Mailings tab" time="67.561335">
+<system-out><![CDATA[Then click and verify  subscriber mailings tab..............................passed
+Then click on queue new mailings button.....................................passed
+Then open and close view mailings link......................................passed
+Then close the pop up.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform action in Resource tab" time="67.672432">
+<system-out><![CDATA[Then click and verify Resources tab.........................................passed
+Then select and search state................................................passed
+Then click on consulates....................................................passed
+Then get all the consulates values from the list............................passed
+Then click on document library..............................................passed
+Then select document type and search........................................passed
+Then Verify returned search results.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform search for client issues" time="53.459995">
+<system-out><![CDATA[When click and verify Client Issues Menu....................................passed
+Then search using "6/20/2016"...............................................passed
+Then verify search result are displayed.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Client Issues section and verifying issue insertion and redirection to all issue tabs" time="138.64638">
+<system-out><![CDATA[Then user clicks issue schedular tab and verifies the navigation............passed
+Then user clicks issue events tab and verifies the navigation...............passed
+Then user clicks issue templates tab and verifies the navigation............passed
+Then user clicks template catagories tab and verifies the navigation........passed
+Then delete dependant and subscriber........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User verify the Mailings Menu" time="65.580514">
+<system-out><![CDATA[When click and verify  Mailings menu........................................passed
+Then search subscriberids using "10536278"..................................passed
+Then click on Retrieve Mailings button......................................passed
+Then verify mailing search results are displayed............................passed
+Then user click on view button and pdf open.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Dependent types section and verifies its associated functionalities." time="128.044313">
+<system-out><![CDATA[Given user is on Dependent types page.......................................passed
+Then user clicks Add button from Dependent Types Not Allowed grid...........passed
+Then user verifies addition to Dependent Types Allowed grid.................passed
+Then user clicks cross icon to remove the added option......................passed
+Then user verifies the removal of option from dep allowed grid..............passed
+Then user verifies the addition to dep not allowed grid.....................passed
+Then user clicks preview button and verifies opening of PDF in new browser tab.passed
+Then user clicks save button and capture update text of bottom..............passed
+Then Open Dependent type pdf and close it...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Verification section and verifies its associated functionalities." time="165.297749">
+<system-out><![CDATA[Given user is on verification page..........................................passed
+Then user clicks select and then edit.......................................passed
+Then user verifies appeared window..........................................passed
+Then user clicks cancel button of window....................................passed
+Then user click on verification list pdf preview and close it...............passed
+Then user clicks Checklist Setup link of top options........................passed
+Then user verifies grids on Checklist setup page............................passed
+Then user clicks on Letter Setup link and verifies grid.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform action in communication" time="164.959247">
+<system-out><![CDATA[When click and verify communications menu...................................passed
+Then edit currently configured letters......................................passed
+Then click on additional options button and close the dialog................passed
+Then click on pdf preview button and close the window.......................passed
+Then click on html preview button and close the window......................passed
+Then click and verify issue tab.............................................passed
+Then click and verify emails tab............................................passed
+Then click and verify SMS tab...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Reports section and verifies its associated functionalities." time="216.190904">
+<system-out><![CDATA[Given user clicks Reports and redirects to Reports page.....................passed
+Then user clicks Run link from Select version grid..........................passed
+Then user clicks Retrieve button and verifies opening of PDF in new tab.....passed
+Then user clicks Go back button and return to Reports main page.............passed
+Then user selects Internal Reports and clicks Run link of first option from version grid.passed
+Then user clicks Retrieve button and verifies opening of PDF in new tab.....passed
+Then user clicks Go back button and return to Reports main page.............passed
+Then user clicks Report Schedular and verifies page.........................passed
+Then user clicks Report History and verifies page...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform action in Received documents" time="111.579297">
+<system-out><![CDATA[When clicked on received document from left panel...........................passed
+Then click on scan queue button.............................................passed
+Then user enter values "4/12/2018"..........................................passed
+Then click on Retreive button...............................................passed
+Then verify the result on scan queue page...................................passed
+Then Click on View button and verify open and close pdf.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform action in Received documents fax queue" time="99.079873">
+<system-out><![CDATA[Then click on fax queue tab.................................................passed
+Then user enter values for fax date "6/1/2018"..............................passed
+Then click on fax Retreive button...........................................passed
+Then verify the result on fax queue page....................................passed
+Then open fax pdf and close it..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform action in Received documents module" time="468.773087">
+<system-out><![CDATA[When clicked on received document from left navigation panel................passed
+Then click on mail prep button..............................................passed
+Then click on the search icon from record info section......................passed
+Then verify that user is on quick search page...............................passed
+Then enter first name "first" for subscriber and retrieve exact match.......passed
+Then Get the grid result for exact match....................................passed
+Then Click on partial match radio button and retrieve partial match.........passed
+Then Get the grid result for partial match..................................passed
+Then click on dependent radio button........................................passed
+Then click on exact match radio button......................................passed
+Then enter last name "last" for dependent and retrieve exact match..........passed
+Then Get the exact match result for dependent...............................passed
+Then Click on partial match radio button for dependent and retrieve partial match.passed
+Then Get the partial match result for dependent.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User perform search for Quality control data" time="43.20207">
+<system-out><![CDATA[When click and verify Quality Control Menu..................................passed
+Then search using "1/1/2018" date...........................................passed
+Then click on filter button.................................................passed
+Then verify search results are displayed for quality control................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User verify the File Transfer Menu" time="61.671874">
+<system-out><![CDATA[When Click and verify File Transfer Menu....................................passed
+Then Filter using "1/1/2016"................................................passed
+Then Click on Filter button.................................................passed
+Then verify result are displayed............................................passed
+Then click on File Imports tab..............................................passed
+Then verify the result on File Import screen................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Admin section and verifies its associated functionalities." time="41.786573">
+<system-out><![CDATA[Given user is on Admin page.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Home section and verifies its associated functionalities." time="84.949615">
+<system-out><![CDATA[Then user clicks Home link from header section and verifies Grid present on Home.passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Client section and verifies its associated functionalities." time="367.035473">
+<system-out><![CDATA[Then user clicks Clients link from header section and verifies Grid on Clients.passed
+Then user clicks Division List and verifies Grid present on Division List...passed
+Then user clicks Client Phases and verifies Grid present on Client Phases...passed
+Then user clicks Project Close and verifies Grid on Project Close...........passed
+Then user clicks Documentary Library and verifies Grid present on Documentary Library.passed
+Then user clicks Portal Interface and verifies Grid present on Portal Interface.passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Client Period section and verifies its associated functionalities." time="387.879666">
+<system-out><![CDATA[Then user clicks Client Period link from header section and verifies Grid on Client Period.passed
+Then user clicks Period Info and verifies Grid present on Period Info.......passed
+Then user clicks Period Alerts and verifies Grid present on Period Alerts...passed
+Then user clicks Plan-Guard and verifies Grid on Plan-Guard.................passed
+Then user clicks Portal and verifies Grid present on Portal.................passed
+Then user clicks Participant Website and verifies Grid present on Participant Website.passed
+Then user clicks Affidavits and verifies Grid present on Affidavits.........passed
+Then user clicks Custom Text and verifies Grid present on Custom Text.......passed
+Then user clicks Reports and verifies Grid present on Reports...............passed
+Then user clicks Override Authoring and verifies Grid present on Override Authoring.passed
+Then user clicks Email Override and verifies Grid present on clicks Email Override.passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects DEAR Setup and verifies its associated functionalities." time="64.990739">
+<system-out><![CDATA[Then user clicks DEAR Setup link from header section and verifies Grid on Dear Setup.passed
+Then user clicks DEAR Templates and verifies Dear Templates.................passed
+Then user clicks DEAR Catagories and verifies Dear Templates................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects BOS section and verifies its associated functionalities." time="134.007742">
+<system-out><![CDATA[Then user clicks BOS link from header section, clicks Stop Refresh button and verifies Grid on BOS.passed
+Then user clicks Current Jobs, clicks Stop Refresh button and verifies Grid on Current Jobs.passed
+Then user clicks Archieved Jobs, retrieve and verifies Grid present on Archieved Jobs.passed
+Then user clicks Job Schedular and verifies Grid on Job Schedular...........passed
+Then user clicks Monitering and verifies Grid on Monitering.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects SQLizers section and verifies its associated functionalities." time="80.759734">
+<system-out><![CDATA[Then user clicks SQLizers link from header section and verifies navigation to SQLizers.passed
+Then user searches a query using "Mailings".................................passed
+Then user runs a query by date as param "05/05/2018"........................passed
+Then user verifies query result grid........................................passed
+Then user clicks Setup Queries and searches queries and saves parameter.....passed
+]]></system-out>
+</testcase>
+<testcase classname="Regression test suite for DVS Automation Admin" name="User selects Misc section and verifies its associated functionalities." time="259.461996">
+<system-out><![CDATA[Then user clicks Misc link from header section and verifies navigation to Misc.passed
+Then User clicks Info / Scripting Items and verifies element on Info / Scripting Items.passed
+Then user clicks Issue Detail Reasons and verifies element on Issue Detail Reasons.passed
+Then user clicks Issue Detail Results and verifies element on Issue Detail Results.passed
+Then user clicks Override reasons and verifies element on Override reasons..passed
+Then user clicks logoff.....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
